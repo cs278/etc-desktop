@@ -1,0 +1,34 @@
+#!/bin/sh
+
+trap 'rm -f "$out";' EXIT
+
+out=$(mktemp)
+src="$GIT_WORK_TREE/.gtk-bookmarks.d/"
+dst="$GIT_WORK_TREE/.gtk-bookmarks"
+
+add()
+{
+	if [ -f "$src/$1" ];
+	then
+		cat "$src/$1" >> "$out"
+	fi
+}
+
+for network in `network-location`;
+do
+	add $network
+done
+
+add $(hostname)
+add default
+
+# Expand $HOME
+sed -i "s,\$HOME,$HOME,g" "$out"
+
+# Remove comments
+sed -i "/^#/d" "$out"
+
+# Remove empty lines
+sed -i "/^$/d" "$out"
+
+mv "$out" "$dst"
