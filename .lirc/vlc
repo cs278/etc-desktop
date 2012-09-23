@@ -1,0 +1,176 @@
+#vlc - http://wiki.videolan.org/How_to_Use_Lirc
+
+begin
+    prog = vlc
+    button = play
+    config = key-play-pause
+    repeat = 0
+end
+
+begin
+    prog = vlc
+    button = pause
+    config = key-pause
+end
+
+begin
+    prog = vlc
+    button = stop
+    config = key-stop
+end
+
+begin
+    prog = vlc
+    button = chandown
+    config = key-prev
+end
+
+begin
+    prog = vlc
+    button = chanup
+    config = key-next
+end
+
+begin
+    prog = vlc
+    button = rewind
+    config = key-slower
+end
+
+begin
+    prog = vlc
+    button = forward
+    config = key-faster
+end
+
+begin
+    prog = vlc
+    button = voldown
+    config = key-vol-down
+end
+
+begin
+    prog = vlc
+    button = volup
+    config = key-vol-up
+end
+
+begin
+    prog = vlc
+    button = mute
+    config = key-vol-mute
+end
+
+begin
+    prog = vlc
+    button = left
+    config = key-nav-left
+end
+
+begin
+    prog = vlc
+    button = right
+    config = key-nav-right
+end
+
+begin
+    prog = vlc
+    button = down
+    config = key-nav-down
+end
+
+begin
+    prog = vlc
+    button = up
+    config = key-nav-up
+end
+
+begin
+    prog = vlc
+    button = ok
+    config = key-nav-activate
+end
+
+begin
+    prog = vlc
+    button = dvd
+    config = key-disc-menu
+end
+
+begin
+	prog = vlc
+	button = replay
+	config = key-chapter-prev
+end
+
+begin
+	prog = vlc
+	button = skip
+	config = key-chapter-next
+end
+
+begin
+	prog = vlc
+	button = power
+	config = key-quit
+end
+
+begin
+	prog = vlc
+	button = home
+	config = key-toggle-fullscreen
+end
+
+begin
+	prog = vlc
+	button = one
+	config = key-play-bookmark1
+end
+
+begin
+	prog = vlc
+	button = two
+	config = key-play-bookmark2
+end
+
+begin
+	prog = vlc
+	button = three
+	config = key-play-bookmark3
+end
+
+begin
+	prog = vlc
+	button = four
+	config = key-play-bookmark4
+end
+
+begin
+	prog = vlc
+	button = five
+	config = key-play-bookmark5
+end
+
+begin
+	prog = vlc
+	button = six
+	config = key-play-bookmark6
+end
+
+begin
+	prog = vlc
+	button = seven
+	config = key-play-bookmark7
+end
+
+begin
+	prog = vlc
+	button = eight
+	config = key-play-bookmark8
+end
+
+begin
+	prog = vlc
+	button = nine
+	config = key-play-bookmark9
+end
