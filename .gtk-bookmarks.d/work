@@ -1,0 +1,8 @@
+file://$HOME/projects/wider-wallet/wider-wallet Wider Wallet
+file://$HOME/projects/wider-wallet/network-benefits Network Benefits
+file://$HOME/projects/wider-wallet/admin WW Admin
+file://$HOME/projects/puppet Puppet
+
+# Argh DFS be here!
+smb://kv-is.local/dev/ Dev
+smb://kv-is.local/data/ Shared Drive
