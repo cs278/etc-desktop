@@ -1,0 +1,5 @@
+# Shell extensions
+org.gnome.shell enabled-extensions ['removeaccesibility@lomegor', 'user-theme@gnome-shell-extensions.gcampax.github.com']
+
+# Keyboard settings
+org.gnome.libgnomekbd.keyboard options ['Compose key\tcompose:rwin']
