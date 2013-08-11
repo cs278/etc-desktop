@@ -33,6 +33,12 @@ then
 	exit
 fi
 
+if ! command -v gsettings &>/dev/null;
+then
+	echo "Cannot find gsettings" >&2
+	exit 1
+fi
+
 while read -r line;
 do
 	schema=$(echo "$line" | cut -d' ' -f1)
