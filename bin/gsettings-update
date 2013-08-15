@@ -26,6 +26,7 @@ set -e
 #set -x
 
 config="${XDG_CONFIG_HOME:-$HOME/.config}/gsettings"
+kbshortcuts="$config-keyboard-shortcuts"
 
 if [ ! -s "$config" ];
 then
@@ -52,3 +53,47 @@ do
 		gsettings set "$schema" "$key" "$value"
 	fi
 done < <(cat "$config" | grep --invert-match --perl-regexp '^(#|$)')
+
+## Handle keyboard shortcuts
+
+if [ ! -s "$kbshortcuts" ];
+then
+	# No keyboard shortcuts, skip
+	exit
+fi
+
+i=0
+bindings=
+
+while read -r line;
+do
+	name=$(echo "$line" | cut -d $'\t' -f 1);
+	command=$(echo "$line" | cut -d $'\t' -f 2);
+	binding=$(echo "$line" | cut -d $'\t' -f 3);
+
+	#echo "$line"
+
+	#echo "$name // $command // $binding"
+
+	if [ ! -z "$name" ] && [ ! -z "$command" ];
+	then
+		echo "Shortcut '$name' => '$command' bound to '$binding'"
+
+		path=/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom$i/
+
+		gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:$path name "'$name'"
+		gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:$path command "'$command'"
+		gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:$path binding "'$binding'"
+
+		bindings+=$([ -z "$bindings" ] && echo "[" || echo ", ")
+		bindings+="'$path'"
+
+		i=$(( $i + 1 ))
+	fi
+done < <(cat "$kbshortcuts" | grep --invert-match --perl-regexp '^(#|$)' | tr -s $'\t')
+
+if [ ! -z "$bindings" ];
+then
+	bindings+="]"
+	gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "$bindings"
+fi
