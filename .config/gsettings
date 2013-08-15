@@ -3,3 +3,7 @@ org.gnome.shell enabled-extensions ['removeaccesibility@lomegor', 'user-theme@gn
 
 # Keyboard settings
 org.gnome.libgnomekbd.keyboard options ['Compose key\tcompose:rwin']
+
+# Calculator settings
+org.gnome.gcalctool button-mode 'programming'
+org.gnome.gcalctool show-thousands true
