@@ -7,6 +7,8 @@ org.gnome.libgnomekbd.keyboard options ['Compose key\tcompose:rwin']
 # Calculator settings
 org.gnome.gcalctool button-mode 'programming'
 org.gnome.gcalctool show-thousands true
+org.gnome.calculator button-mode 'programming'
+org.gnome.calculator show-thousands true
 
 # Theme
 org.gnome.desktop.wm.preferences theme 'Ambiance'
