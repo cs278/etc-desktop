@@ -7,3 +7,13 @@ org.gnome.libgnomekbd.keyboard options ['Compose key\tcompose:rwin']
 # Calculator settings
 org.gnome.gcalctool button-mode 'programming'
 org.gnome.gcalctool show-thousands true
+
+# Theme
+org.gnome.desktop.wm.preferences theme 'Ambiance'
+org.gnome.desktop.wm.preferences titlebar-font 'Ubuntu Bold 11'
+org.gnome.desktop.interface gtk-theme 'Ambiance'
+org.gnome.desktop.interface cursor-theme 'DMZ-White'
+org.gnome.desktop.interface icon-theme 'ubuntu-mono-dark'
+
+# Interaction
+org.gnome.desktop.wm.preferences resize-with-right-button true
