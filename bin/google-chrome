@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# Create a unique temporary directory for Chrome.
+export TMPDIR=$(mktemp --tmpdir --directory chrome.XXXXXXXX)
+
+# Change into temporary directory
+# https://code.google.com/p/chromium/issues/detail?id=239048
+cd "$TMPDIR"
+
+exec /usr/bin/google-chrome "$@"
