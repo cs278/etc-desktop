@@ -50,7 +50,7 @@ do
 	then
 		echo "Setting $schema/$key=$value" >&2
 
-		gsettings set "$schema" "$key" "$value"
+		gsettings set "$schema" "$key" "$value" || true
 	fi
 done < <(cat "$config" | grep --invert-match --perl-regexp '^(#|$)')
 
