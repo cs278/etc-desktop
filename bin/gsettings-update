@@ -68,8 +68,8 @@ bindings=
 while read -r line;
 do
 	name=$(echo "$line" | cut -d $'\t' -f 1);
-	command=$(echo "$line" | cut -d $'\t' -f 2);
-	binding=$(echo "$line" | cut -d $'\t' -f 3);
+	binding=$(echo "$line" | cut -d $'\t' -f 2);
+	command=$(echo "$line" | cut -d $'\t' -f 3);
 
 	#echo "$line"
 

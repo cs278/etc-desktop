@@ -1,4 +1,4 @@
-# Name <TAB> 	Command <TAB> 							Keybinding
-##############################################################################
-Calculator		gcalctool								<Primary><Shift><Alt>c
-GitHub			x-www-browser https://github.com/launch	<Primary><Shift><Alt>g
+# Name <TAB> 			Keybinding <TAB>							Command
+###########################################################################
+Calculator				<Primary><Shift><Alt>c						gcalctool
+GitHub					<Primary><Shift><Alt>g						x-www-browser https://github.com/launch
