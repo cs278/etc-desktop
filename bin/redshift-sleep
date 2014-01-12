@@ -2,6 +2,6 @@
 
 redshift-toggle
 
-sleep $1
+sleep ${1:-1h}
 
 redshift-toggle
