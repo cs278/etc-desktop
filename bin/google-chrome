@@ -1,7 +1,18 @@
 #!/bin/sh
 
-# Create a unique temporary directory for Chrome.
-TMPDIR=$(mktemp --tmpdir --directory chrome.XXXXXXXX)
+# Lock down created files
+umask 0077
+
+# Attempt to find existing temporary directory
+dir=$(find "${TMPDIR:-/tmp}" -maxdepth 1 -type d -uid `id -u` -name "chrome.*" | head -n1)
+
+if [ -z "$dir" ];
+then
+	# Create a unique temporary directory for Chrome.
+	TMPDIR=$(mktemp --tmpdir --directory chrome.XXXXXXXX)
+else
+	TMPDIR="$dir"
+fi
 
 # Export variable
 export TMPDIR
