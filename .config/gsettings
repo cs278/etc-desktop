@@ -21,6 +21,9 @@ org.gnome.desktop.wm.preferences titlebar-font 'Ubuntu Bold 11'
 org.gnome.desktop.interface gtk-theme 'Ambiance'
 org.gnome.desktop.interface cursor-theme 'DMZ-White'
 org.gnome.desktop.interface icon-theme 'ubuntu-mono-dark'
+org.gnome.desktop.interface font-name 'Ubuntu 11'
+org.gnome.desktop.interface monospace-font-name 'Ubuntu Mono 13'
+org.gnome.desktop.interface document-font-name 'Sans 11'
 
 # Interaction
 org.gnome.desktop.wm.preferences resize-with-right-button true
