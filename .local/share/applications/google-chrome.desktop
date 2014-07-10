@@ -25,4 +25,4 @@ Name=New Incognito Window
 Name[en_GB]=New Incognito window
 Exec=google-chrome --incognito
 TargetEnvironment=Unity
-MimeType=x-scheme-handler/unknown;x-scheme-handler/about;text/html;text/xml;application/xhtml_xml;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/ftp;
+MimeType=x-scheme-handler/mailto;x-scheme-handler/unknown;x-scheme-handler/about;text/html;text/xml;application/xhtml_xml;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/ftp;
