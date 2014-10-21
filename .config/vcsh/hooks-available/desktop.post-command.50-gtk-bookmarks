@@ -2,9 +2,10 @@
 
 trap 'rm -f "$out";' EXIT
 
+root="$(git rev-parse --show-toplevel)"
 out=$(mktemp)
-src="$GIT_WORK_TREE/.gtk-bookmarks.d/"
-dst="$GIT_WORK_TREE/.gtk-bookmarks"
+src="$root/.gtk-bookmarks.d/"
+dst="$root/.gtk-bookmarks"
 
 add()
 {
