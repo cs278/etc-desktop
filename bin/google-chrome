@@ -21,4 +21,4 @@ export TMPDIR
 # https://code.google.com/p/chromium/issues/detail?id=239048
 cd "$TMPDIR"
 
-exec /usr/bin/google-chrome --ssl-version-min=tls1 --cipher-suite-blacklist=0x0005,0x0004,0xC002,0xC007,0xC00C,0xC011 "$@"
+exec /usr/bin/google-chrome --ssl-version-min=tls1 --cipher-suite-blacklist=0x0005,0x0004,0xC002,0xC007,0xC00C,0xC011,0x0032 "$@"
