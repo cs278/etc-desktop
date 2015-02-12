@@ -2,10 +2,11 @@
 
 trap 'rm -f "$out";' EXIT
 
-root="$(git rev-parse --show-toplevel)"
+VCSH_BASE="$(git rev-parse --show-toplevel)"
+
 out=$(mktemp)
-src="$root/.gtk-bookmarks.d/"
-dst="$root/.gtk-bookmarks"
+src="$VCSH_BASE/.gtk-bookmarks.d/"
+dst="$VCSH_BASE/.gtk-bookmarks"
 
 add()
 {
