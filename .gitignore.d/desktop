@@ -10,6 +10,8 @@
 !/.config/autostart/redshift.desktop
 !/.config/gsettings
 !/.config/gsettings-keyboard-shortcuts
+!/.config/gtk-3.0
+!/.config/gtk-3.0/settings.ini
 !/.config/mr
 !/.config/mr/config.d
 !/.config/mr/config.d/gnome3
