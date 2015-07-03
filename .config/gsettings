@@ -16,11 +16,11 @@ org.gnome.calculator button-mode 'programming'
 org.gnome.calculator show-thousands true
 
 # Theme
-org.gnome.desktop.wm.preferences theme 'Ambiance'
+org.gnome.desktop.wm.preferences theme 'Numix'
 org.gnome.desktop.wm.preferences titlebar-font 'Droid Sans Bold 11'
-org.gnome.desktop.interface gtk-theme 'Ambiance'
+org.gnome.desktop.interface gtk-theme 'Numix'
 org.gnome.desktop.interface cursor-theme 'DMZ-White'
-org.gnome.desktop.interface icon-theme 'ubuntu-mono-dark'
+org.gnome.desktop.interface icon-theme 'Numix'
 org.gnome.desktop.interface font-name 'Droid Sans 11'
 org.gnome.desktop.interface monospace-font-name 'Inconsolata Medium 13'
 org.gnome.desktop.interface document-font-name 'Droid Sans 11'
