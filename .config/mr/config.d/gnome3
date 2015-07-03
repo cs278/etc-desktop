@@ -4,3 +4,6 @@ checkout = git clone https://github.com/lomegor/Remove-Accessibility.git removea
 [$HOME/.local/share/icons/numix-icon-theme]
 checkout = git clone gh:numixproject/numix-icon-theme $MR_REPO
 post_update = (cd "$MR_REPO/.." && ln -sf $(basename "$MR_REPO")/Numix)
+
+[$HOME/.local/share/themes/Numix]
+checkout = git clone gh:shimmerproject/Numix
