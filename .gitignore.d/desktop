@@ -30,6 +30,8 @@
 !/.gtk-bookmarks.d/flat
 !/.gtk-bookmarks.d/kinslayer
 !/.gtk-bookmarks.d/work
+!/.icons
+!/.icons/default
 !/.lirc
 !/.lirc/banshee
 !/.lircrc
