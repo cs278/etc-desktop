@@ -4,11 +4,13 @@ checkout = git clone https://github.com/lomegor/Remove-Accessibility.git removea
 [$HOME/.local/share/icons/numix-icon-theme]
 checkout = git clone gh:numixproject/numix-icon-theme $MR_REPO
 post_update = (cd "$MR_REPO/.." && ln -sf $(basename "$MR_REPO")/Numix)
-fixups = find "$MR_REPO/Numix" -name "google-chrome.*" -delete
+fixups = find "$MR_REPO/Numix" -name "google-chrome.*" -delete &&
+	gtk-update-icon-cache -f "$MR_REPO/Numix"
 
 [$HOME/.local/share/icons/numix-icon-theme-circle]
 checkout = git clone gh:numixproject/numix-icon-theme-circle $MR_REPO
 post_update = (cd "$MR_REPO/.." && ln -sf $(basename "$MR_REPO")/Numix-Circle)
+fixups = gtk-update-icon-cache -f "$MR_REPO/Numix-Circle"
 
 [$HOME/.local/share/themes/Numix]
 checkout = git clone gh:shimmerproject/Numix
