@@ -1,7 +1,15 @@
 #!/bin/sh
 
+set -x
+
+cleanup() {
+	redshift-toggle
+}
+
+trap cleanup INT TERM
+
 redshift-toggle
 
 sleep ${1:-1h}
 
-redshift-toggle
+cleanup
