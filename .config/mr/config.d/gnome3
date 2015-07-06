@@ -1,4 +1,6 @@
 [$HOME/.local/share/gnome-shell/extensions/removeaccesibility@lomegor]
+# From GNOME Shell 3.8 the accessibility menu is hidden.
+skip = ! which gnome-shell || gnome-shell --version | awk '{ print substr($NF,0,4) }' | grep -qv '3\.[01234567]\.'
 checkout = git clone https://github.com/lomegor/Remove-Accessibility.git removeaccesibility@lomegor
 
 [$HOME/.local/share/icons/numix-icon-theme]
