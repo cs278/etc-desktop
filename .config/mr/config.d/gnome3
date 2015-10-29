@@ -16,3 +16,4 @@ fixups = gtk-update-icon-cache -f "$MR_REPO/Numix-Circle"
 
 [$HOME/.local/share/themes/Numix]
 checkout = git clone gh:shimmerproject/Numix
+fixups = (cd "$MR_REPO" && make)
