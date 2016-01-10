@@ -8,6 +8,8 @@ org.gnome.desktop.interface clock-show-seconds true
 
 # Keyboard settings
 org.gnome.libgnomekbd.keyboard options ['Compose key\tcompose:rwin']
+org.gnome.desktop.input-sources sources [('xkb', 'gb')]
+org.gnome.desktop.input-sources xkb-options ['grab:debug', 'compose:rwin']
 
 # Calculator settings
 org.gnome.gcalctool button-mode 'programming'
