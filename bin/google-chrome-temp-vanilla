@@ -1,0 +1,8 @@
+#!/bin/sh
+
+set -e
+set -u
+
+dir=$(mktemp -d)
+
+exec /usr/bin/google-chrome --no-default-browser-check --no-first-run --user-data-dir="$dir" --password-store=basic "$@"
