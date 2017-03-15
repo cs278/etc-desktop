@@ -1,4 +1,0 @@
-[src/chrome/web-scrobbler]
-checkout = git clone cs278:chrome-web-scrobbler web-scrobbler &&
-           cd web-scrobbler &&
-           git remote add upstream gh:david-sabata/web-scrobbler

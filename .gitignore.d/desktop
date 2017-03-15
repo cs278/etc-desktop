@@ -12,7 +12,6 @@
 !/.config/gsettings-keyboard-shortcuts
 !/.config/gtk-3.0/settings.ini
 !/.config/mr/config.d/gnome3
-!/.config/mr/config.d/google-chrome
 !/.config/redshift.conf
 !/.config/vcsh/hooks-available/desktop.post-command.50-gsettings
 !/.config/vcsh/hooks-available/desktop.post-command.50-gtk-bookmarks
