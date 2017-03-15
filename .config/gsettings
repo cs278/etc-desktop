@@ -19,13 +19,13 @@ org.gnome.calculator show-thousands true
 
 # Theme
 org.gnome.desktop.wm.preferences theme 'Numix'
-org.gnome.desktop.wm.preferences titlebar-font 'Droid Sans Bold 11'
+org.gnome.desktop.wm.preferences titlebar-font 'Roboto Bold 11'
 org.gnome.desktop.interface gtk-theme 'Numix'
 org.gnome.desktop.interface cursor-theme 'DMZ-White'
 org.gnome.desktop.interface icon-theme 'Numix-Circle'
-org.gnome.desktop.interface font-name 'Droid Sans 11'
+org.gnome.desktop.interface font-name 'Roboto 11'
 org.gnome.desktop.interface monospace-font-name 'Inconsolata Medium 13'
-org.gnome.desktop.interface document-font-name 'Droid Sans 11'
+org.gnome.desktop.interface document-font-name 'Roboto 11'
 
 # Interaction
 org.gnome.desktop.wm.preferences resize-with-right-button true
