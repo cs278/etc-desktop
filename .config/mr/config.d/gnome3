@@ -16,6 +16,7 @@ fixups = gtk-update-icon-cache -f "$MR_REPO/Numix-Circle"
 
 [$HOME/.local/share/themes/Numix]
 checkout = git clone gh:numixproject/Numix
+update = git fetch
 skip = ! which scss gdk-pixbuf-pixdata >/dev/null && echo "Missing required commands to build Numix, skipping"
 fixups = (cd "$MR_REPO" && git checkout c65721b && make &&
 	sed -i '/outline-color: rgba(240, 84, 76, 0.5);/d' gtk-3.0/dist/gtk*.css &&
