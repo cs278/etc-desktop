@@ -51,4 +51,8 @@ cipherBlacklist="$cipherBlacklist,0x0033" # TLS_DHE_RSA_WITH_AES_128_CBC_SHA
 
 #cipherBlacklist="$cipherBlacklist," #
 
-exec /usr/bin/google-chrome --ssl-version-min=tls1 --cipher-suite-blacklist="$cipherBlacklist" "$@"
+args=
+args="$args --ssl-version-min=tls1"
+args="$args --cipher-suite-blacklist=$cipherBlacklist"
+
+exec /usr/bin/google-chrome $args "$@"
