@@ -61,6 +61,9 @@ args="$args --cipher-suite-blacklist=$cipherBlacklist"
 # workarounds, so this seems the better option.
 if [ "${HOSTNAME:-$(hostname)}" = "wp-105-lu" ]; then
 	args="$args --force-gpu-rasterization --enable-native-gpu-memory-buffers"
+
+	# Google Play Music still flashes away without these flags. :(
+	args="$args --disable-gpu-driver-bug-workarounds --enable-zero-copy"
 fi
 
 exec /usr/bin/google-chrome $args "$@"
