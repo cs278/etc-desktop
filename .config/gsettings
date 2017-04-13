@@ -1,5 +1,8 @@
 # Shell extensions
-org.gnome.shell enabled-extensions ['removeaccesibility@lomegor', 'user-theme@gnome-shell-extensions.gcampax.github.com']
+org.gnome.shell enabled-extensions ['removeaccesibility@lomegor', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'auto-move-windows@gnome-shell-extensions.gcampax.github.com']
+
+# Auto Move Windows extension
+org.gnome.shell.extensions.auto-move-windows application-list ['atom.desktop:2', 'gnome-terminal.desktop:3', 'keepass2.desktop:4', 'google-chrome.desktop:1']
 
 # Shell settings
 org.gnome.desktop.interface clock-format '24h'
