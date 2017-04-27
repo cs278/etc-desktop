@@ -1,5 +1,6 @@
 *
 !/bin/chromium-browser
+!/bin/desktop-startup
 !/bin/google-chrome
 !/bin/google-chrome-temp
 !/bin/google-chrome-temp-vanilla
@@ -8,6 +9,7 @@
 !/bin/redshift-toggle
 !/.config/autostart/gnome-keyring-ssh.desktop
 !/.config/autostart/redshift.desktop
+!/.config/autostart/startup.desktop
 !/.config/gsettings
 !/.config/gsettings-keyboard-shortcuts
 !/.config/gtk-3.0/settings.ini

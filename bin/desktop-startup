@@ -1,0 +1,69 @@
+#!/bin/sh
+
+set -eu
+
+move_window_to_workspace() {
+  window=$1; shift
+  workspace=$(( $1 - 1 )); shift
+  max_workspace=$(wmctrl -d | awk 'END { print $1 }')
+
+  if [ $workspace -gt $max_workspace ]; then
+    # Move window along each workspace one at a time because Gnome creates
+    # them dynamically you must create the workspace before it can be used.
+    for ws in $(seq $max_workspace $workspace); do
+      echo "Moving $window to $ws" >&2
+      wmctrl -i -r $window -t $ws
+      sleep 0.05s
+    done
+  else
+    echo "Moving $window to $workspace" >&2
+    wmctrl -i -r $window -t $workspace
+  fi
+}
+
+# Convert Process ID to Window ID
+get_wid_by_pid() {
+  pid=$1; shift
+  wid=$(wmctrl -l -p | awk -vPID=$pid '$3 == PID { print $1 }')
+
+  if [ -z "$wid" ]; then
+    return 1
+  fi
+
+  echo "$wid"
+}
+
+start_application_on_workspace() {
+  app=$1; shift
+  workspace=$1; shift
+
+  $app &
+  pid=$!
+
+  echo $$
+
+  (
+    i=0
+    # Wait up to 100 x 0.1s = 10s
+    until [ $i -ge 1000 ] || wid=$(get_wid_by_pid "$pid"); do
+      i=$(( i + 1 ))
+      sleep 0.1s
+    done
+
+    if ! [ -z "$wid" ]; then
+      move_window_to_workspace "$wid" $workspace
+    fi
+  ) &
+}
+
+focus_workspace() {
+  workspace=$(( $1 - 1 ))
+  wmctrl -s $workspace
+}
+
+if [ "work" == "$(network-location)" ]; then
+  start_application_on_workspace google-chrome 1
+  start_application_on_workspace atom 2
+  start_application_on_workspace gnome-terminal 3
+  focus_workspace 1
+fi

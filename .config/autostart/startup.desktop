@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Autostart Script
+Comment=Host specific startup script
+Exec=desktop-startup
+Terminal=false
+Type=Application
+X-Gnome-Autostart=true
