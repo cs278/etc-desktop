@@ -2,6 +2,10 @@
 
 set -eu
 
+log() {
+  logger --id --tag "desktop-startup($(id -un))" "$1"
+}
+
 move_window_to_workspace() {
   window=$1; shift
   workspace=$(( $1 - 1 )); shift
@@ -61,7 +65,11 @@ focus_workspace() {
   wmctrl -s $workspace
 }
 
-if [ "work" == "$(network-location)" ]; then
+log "Executing"
+
+if [ "work" = "$(network-location)" ]; then
+  log "Selected work"
+
   start_application_on_workspace google-chrome 1
   start_application_on_workspace atom 2
   start_application_on_workspace gnome-terminal 3
