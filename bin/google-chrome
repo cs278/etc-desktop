@@ -55,15 +55,4 @@ args=
 args="$args --ssl-version-min=tls1"
 args="$args --cipher-suite-blacklist=$cipherBlacklist"
 
-# Workaround weird flashes which seem to be caused by workarounds applied when
-# using the mesa video driver. Using --disable-gpu-driver-bug-workarounds also
-# appears to fix the problem but might impact other things by disabling all
-# workarounds, so this seems the better option.
-if [ "${HOSTNAME:-$(hostname)}" = "wp-105-lu" ]; then
-	args="$args --force-gpu-rasterization --enable-native-gpu-memory-buffers"
-
-	# Google Play Music still flashes away without these flags. :(
-	args="$args --disable-gpu-driver-bug-workarounds --enable-zero-copy"
-fi
-
 exec /usr/bin/google-chrome $args "$@"
