@@ -129,3 +129,5 @@ org.gnome.Terminal.Legacy.Keybindings switch-to-tab-30 'disabled'
 org.gnome.Terminal.Legacy.Keybindings switch-to-tab-31 'disabled'
 org.gnome.Terminal.Legacy.Keybindings switch-to-tab-8 '<Alt>8'
 
+# Screen Record
+org.gnome.settings-daemon.plugins.media-keys max-screencast-length 600
