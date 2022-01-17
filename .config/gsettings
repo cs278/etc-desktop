@@ -186,3 +186,12 @@ org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:2c86dc7a
 
 # Screen Record
 org.gnome.settings-daemon.plugins.media-keys max-screencast-length 600
+
+# Location services
+org.gnome.system.location enabled true
+org.gnome.system.location max-accuracy-level 'city'
+
+# Nightlight
+org.gnome.settings-daemon.plugins.color night-light-enabled true
+org.gnome.settings-daemon.plugins.color night-light-schedule-automatic true
+org.gnome.settings-daemon.plugins.color night-light-temperature uint32 2700
