@@ -5,15 +5,12 @@
 !/bin/google-chrome-temp
 !/bin/google-chrome-temp-vanilla
 !/bin/gsettings-update
-!/bin/redshift-sleep
-!/bin/redshift-toggle
 !/.config/autostart/redshift.desktop
 !/.config/autostart/startup.desktop
 !/.config/gsettings
 !/.config/gsettings-keyboard-shortcuts
 !/.config/gtk-3.0/settings.ini
 !/.config/mr/config.d/gnome3
-!/.config/redshift.conf
 !/.config/vcsh/hooks-available/desktop.post-command.50-gsettings
 !/.config/vcsh/hooks-available/desktop.post-command.50-gtk-bookmarks
 !/.config/vcsh/hooks-enabled/desktop.post-command.50-gsettings
