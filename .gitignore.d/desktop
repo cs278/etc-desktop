@@ -7,7 +7,6 @@
 !/bin/gsettings-update
 !/bin/redshift-sleep
 !/bin/redshift-toggle
-!/.config/autostart/gnome-keyring-ssh.desktop
 !/.config/autostart/redshift.desktop
 !/.config/autostart/startup.desktop
 !/.config/gsettings
